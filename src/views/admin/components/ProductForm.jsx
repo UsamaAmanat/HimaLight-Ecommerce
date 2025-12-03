@@ -16,10 +16,10 @@ import { uploadToS3 } from "../../../helpers/s3Upload.js";
 
 // Default brand names that I used. You can use what you want
 const brandOptions = [
-  { value: "Salt Maalat", label: "Salt Maalat" },
-  { value: "Betsin Maalat", label: "Betsin Maalat" },
-  { value: "Sexbomb", label: "Sexbomb" },
-  { value: "Black Kibal", label: "Black Kibal" },
+  { value: "Company 1", label: "Company 1" },
+  { value: "Company 2", label: "Company 2" },
+  { value: "Company 3", label: "Company 3" },
+  { value: "Company 4", label: "Company 4" },
 ];
 
 const FormSchema = Yup.object().shape({
