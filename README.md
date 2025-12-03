@@ -6,6 +6,28 @@ This README documents how to get the project running locally, how uploads work (
 
 ---
 
+View the project: <a href="https://hima-light-ecommerce.vercel.app/" target="_blank" style="
+  display: inline-block;
+  padding: 10px 18px;
+  background-color: yellow;
+  color: white;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;">
+  Live Demo
+</a>
+
+---
+
+## Project Screenshots
+![Project Screenshots](https://github.com/UsamaAmanat/HimaLight-Ecommerce/blob/main/static/1.png)
+![Project Screenshots](https://github.com/UsamaAmanat/HimaLight-Ecommerce/blob/main/static/2.jpg)
+![Project Screenshots](https://github.com/UsamaAmanat/HimaLight-Ecommerce/blob/main/static/3.jpg)
+
+
+
+---
+
 ## Tech stack
 - React 17
 - Vite
