@@ -1,0 +1,234 @@
+.navigation {
+  width: 100%;
+  height: auto;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  padding: 1rem 5rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  transform: translateY(0);
+  z-index: map-get($z-index, navigation);
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.08);
+  justify-content: space-between;
+  @include bezier-transition(transform, 0.3s, ease);
+
+  @include tablet {
+    padding: 1rem 2rem;
+  }
+
+  @include mobile {
+    display: none;
+  }
+
+  &.is-nav-scrolled {
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.12);
+  }
+}
+
+.nav-container {
+  max-width: 1400px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 auto;
+}
+
+.nav-left {
+  display: flex;
+  align-items: center;
+  flex: 0 0 auto;
+}
+
+.logo {
+  height: 5rem;
+  display: flex;
+  align-items: center;
+
+  img {
+    height: 100%;
+    width: auto;
+    object-fit: contain;
+    max-width: 150px;
+  }
+
+  a {
+    display: block;
+    height: 100%;
+    display: flex;
+    align-items: center;
+  }
+}
+
+.navigation-menu-main {
+  padding: 0;
+  margin: 0 3rem;
+  display: flex;
+  align-items: center;
+  flex: 1;
+  list-style: none;
+
+  li {
+    display: inline-block;
+    position: relative;
+    margin: 0 0.5rem;
+
+    a {
+      display: block;
+      padding: 0.8rem 1.2rem;
+      font-size: 16px;
+      font-weight: 500;
+      color: #333;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      border-radius: 4px;
+      position: relative;
+
+      &::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        width: 0;
+        height: 3px;
+        background: #ef4848;
+        transform: translateX(-50%);
+        transition: width 0.3s ease;
+        border-radius: 2px;
+      }
+
+      &:hover,
+      &.navigation-menu-active {
+        color: #ef4848;
+        background: rgba(239, 72, 72, 0.05);
+
+        &::after {
+          width: 70%;
+        }
+      }
+    }
+  }
+}
+
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  flex: 0 0 auto;
+
+  .searchbar {
+    width: 280px;
+  }
+}
+
+.nav-filter-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  border-radius: 8px;
+  background: #f5f5f5;
+  border: 1px solid #e0e0e0;
+  transition: all 0.3s ease;
+  cursor: pointer;
+
+  &:hover {
+    background: #ef4848;
+    color: white;
+    border-color: #ef4848;
+  }
+}
+
+.navigation-menu {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  gap: 1rem;
+}
+
+.navigation-menu-item {
+  display: inline-block;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.navigation-action {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  margin-left: 0.5rem;
+}
+
+.navigation-menu-link {
+  color: #333;
+  padding: 0.5rem 0.8rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  border-radius: 8px;
+
+  &:hover {
+    color: #ef4848;
+    background: rgba(239, 72, 72, 0.08);
+  }
+
+  &.basket-toggle {
+    font-size: 1rem;
+  }
+}
+
+.nav-btn-signup {
+  background: #ef4848;
+  color: white;
+  border: none;
+  padding: 0.8rem 1.8rem;
+  border-radius: 6px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  cursor: pointer;
+
+  &:hover {
+    background: #d93939;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(239, 72, 72, 0.3);
+  }
+
+  &:active {
+    transform: translateY(0);
+  }
+}
+
+.nav-btn-signin {
+  background: transparent;
+  color: #ef4848;
+  border: 2px solid #ef4848;
+  padding: 0.6rem 1.6rem;
+  border-radius: 6px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  cursor: pointer;
+
+  &:hover {
+    background: #ef4848;
+    color: white;
+    transform: translateY(-2px);
+  }
+
+  &:active {
+    transform: translateY(0);
+  }
+}
+
+.navigation-menu-active {
+  font-weight: bold;
+  opacity: 1 !important;
+}
